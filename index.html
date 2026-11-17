@@ -7,7 +7,10 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#0f172a">
 
-    <!-- Google Fonts -->
+    <!-- Logo preload (faster first paint) -->
+    <link rel="preload" as="image" href="nn.jpg" fetchpriority="high">
+
+    <!-- Google Fonts (display=swap = text turant dikhega, blocking nahi) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -57,7 +60,7 @@
         .container {
             max-width: 480px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 16px 20px;
             text-align: center;
             flex-grow: 1;
             display: flex;
@@ -65,14 +68,14 @@
             justify-content: center;
         }
 
-        .brand-area { margin-bottom: 22px; }
+        .brand-area { margin-bottom: 14px; }
 
         .logo-wrap {
             position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 12px;
-            box-shadow: 0 0 28px rgba(0, 210, 255, 0.35);
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 8px;
+            box-shadow: 0 0 24px rgba(0, 210, 255, 0.35);
             border-radius: 50%;
         }
 
@@ -89,20 +92,20 @@
         .logo-img {
             position: relative;
             z-index: 2;
-            width: 138px;
-            height: 138px;
-            margin: 6px;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
             border-radius: 50%;
             object-fit: cover;
             object-position: 50% 30%;
-            border: 4px solid var(--bg-dark);
+            border: 3px solid var(--bg-dark);
             background: var(--bg-dark);
         }
 
         @keyframes spin { to { transform: rotate(360deg); } }
 
         .logo-text {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             letter-spacing: 2px;
             color: var(--primary-color);
             text-transform: uppercase;
@@ -113,16 +116,16 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            margin-top: 6px;
+            margin-top: 4px;
             font-size: 0.8rem;
             color: var(--accent-color);
             font-weight: 600;
         }
 
         h1 {
-            font-size: 2.2rem;
+            font-size: 1.9rem;
             line-height: 1.2;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             background: linear-gradient(var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             background-clip: text;
@@ -131,9 +134,9 @@
         }
 
         .sub-headline {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #cbd5e1;
-            margin-bottom: 28px;
+            margin-bottom: 18px;
             font-weight: 400;
         }
 
@@ -141,16 +144,16 @@
             list-style: none;
             text-align: left;
             background: var(--glass-bg);
-            padding: 20px;
+            padding: 18px 20px;
             border-radius: 15px;
             border: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 28px;
+            margin-bottom: 22px;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
 
         .features li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             font-size: 0.95rem;
@@ -162,8 +165,8 @@
             font-size: 1.2rem;
         }
 
-        .cta-container-top { margin-bottom: 20px; }
-        .cta-container-bottom { margin-top: auto; padding-bottom: 20px; }
+        .cta-container-top { margin-bottom: 18px; }
+        .cta-container-bottom { margin-top: auto; padding-bottom: 16px; }
 
         .telegram-btn {
             display: block;
@@ -205,7 +208,7 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 16px 20px;
             font-size: 0.75rem;
             color: #64748b;
         }
@@ -235,9 +238,9 @@
         }
 
         @media (max-width: 380px) {
-            h1 { font-size: 1.8rem; }
-            .logo-wrap { width: 130px; height: 130px; }
-            .logo-img { width: 118px; height: 118px; margin: 6px; }
+            h1 { font-size: 1.65rem; }
+            .logo-wrap { width: 96px; height: 96px; }
+            .logo-img { width: 86px; height: 86px; margin: 5px; }
         }
     </style>
 </head>
@@ -253,7 +256,7 @@
         <div class="brand-area">
             <div class="logo-wrap">
                 <div class="logo-ring"></div>
-                <img class="logo-img" src="nn.jpg" alt="Trading Skill Learning Academy Mentor" width="138" height="138" fetchpriority="high">
+                <img class="logo-img" src="nn.jpg" alt="Trading Skill Learning Academy Mentor" width="100" height="100" fetchpriority="high">
             </div>
             <div class="logo-text">Trading Skill Academy</div>
             <div class="mentor-tag">✓ Your Expert Mentor</div>
@@ -262,12 +265,12 @@
         <h1>Master the Markets.<br>सही ट्रेडिंग सीखें।</h1>
 
         <p class="sub-headline">
-            Stop gambling, start trading. Join our exclusive community for daily analysis and learning.
+            Join our community for daily market analysis and learning.
             <br>
             <span style="font-size: 0.9em; opacity: 0.8;">बिना सीखे ट्रेडिंग में पैसा न लगाएं।</span>
         </p>
 
-        <!-- BUTTON 1 -->
+        <!-- BUTTON 1 (above the fold) -->
         <div class="cta-container-top">
             <a href="https://t.me/+n9N-z9jPd_NmNDE1" class="telegram-btn tg-join-btn" rel="noopener">
                <span class="btn-icon">✈️</span> Join Free Channel
@@ -278,7 +281,7 @@
             <li><span>✓</span> Live Market Analysis (लाइव मार्केट)</li>
             <li><span>✓</span> Price Action Strategies (स्ट्रैटेजी)</li>
             <li><span>✓</span> Psychology &amp; Risk Management</li>
-            <li><span>✓</span> 100% Free Education (मुफ्त शिक्षा)</li>
+            <li><span>✓</span> Free Education (मुफ्त शिक्षा)</li>
         </ul>
 
         <!-- BUTTON 2 -->
@@ -293,7 +296,7 @@
 
     <footer>
         &copy; 2026 Trading Skill Learning Academy. All rights reserved.<br>
-        Trading involves financial risk.
+        Trading involves financial risk. No profit is guaranteed.
 
         <div class="adv">Advertised by : SRS Marketing Agency<br><a href="https://t.me/srsagency" target="_blank" rel="noopener">t.me/srsagency</a></div>
     </footer>
@@ -303,21 +306,26 @@
         'use strict';
 
         /* ================= CONFIG ================= */
-        var MIN_DWELL_MS = 1500;      // isse pehle ka click = bot/accidental -> Lead fire nahi hoga
-        var LEAD_KEY     = 'tg_lead_fired_v1';
+        var MIN_DWELL_MS = 800;       // isse pehle ka click = bot/accidental -> Lead fire nahi hoga
+        var LEAD_KEY     = 'tg_lead_fired_v2';
         var TG_URL       = 'https://t.me/+n9N-z9jPd_NmNDE1';
+        // Android FB/Instagram in-app browser me kaise open karein:
+        //   'telegram' = seedha Telegram app (1 hop, best)  |  'chrome' = Chrome me open (2 hop)
+        var ANDROID_MODE = 'telegram';
         /* ========================================= */
 
         var loadTime = Date.now();
         var ua = navigator.userAgent || '';
 
-        /* ---- Bot / automation detection ---- */
+        /* ---- Bot / automation detection ----
+           NOTE: window.outerWidth/outerHeight === 0 check HATA diya gaya hai.
+           Facebook/Instagram iOS in-app browsers me ye 0 aa sakta hai,
+           jisse real users ka Lead event kabhi fire nahi hota tha. */
         function automationDetected() {
             try {
                 if (navigator.webdriver) return true;
-                if (/HeadlessChrome|PhantomJS|Selenium|Puppeteer|Playwright|Lighthouse|bot|crawl|spider/i.test(ua)) return true;
+                if (/HeadlessChrome|PhantomJS|Selenium|Puppeteer|Playwright|Lighthouse|\bbot\b|crawler|spider/i.test(ua)) return true;
                 if (window.callPhantom || window._phantom || window.__nightmare) return true;
-                if (window.outerWidth === 0 && window.outerHeight === 0) return true;
             } catch (e) {}
             return false;
         }
@@ -327,17 +335,35 @@
         var isIOS     = /iPhone|iPad|iPod/i.test(ua);
         var inApp     = /FBAN|FBAV|FB_IAB|FBIOS|Instagram/i.test(ua);
 
+        function inviteHash() {
+            var m = TG_URL.match(/t\.me\/\+([\w-]+)/);
+            return m ? m[1] : '';
+        }
+
         function setupInApp() {
             if (!inApp) return;
+            var links = document.querySelectorAll('.tg-join-btn');
+            var i;
+
             if (isAndroid) {
-                // Chrome me force-open karo taaki Telegram app hand-off kaam kare
-                var intent = 'intent://' + TG_URL.replace(/^https?:\/\//, '') +
-                    '#Intent;scheme=https;package=com.android.chrome;end';
-                var links = document.querySelectorAll('.tg-join-btn');
-                for (var i = 0; i < links.length; i++) links[i].setAttribute('href', intent);
+                var intent = '';
+                var hash = inviteHash();
+                if (ANDROID_MODE === 'telegram' && hash) {
+                    // Seedha Telegram app; app na ho to t.me page par fallback
+                    intent = 'intent://join?invite=' + hash +
+                        '#Intent;scheme=tg;S.browser_fallback_url=' +
+                        encodeURIComponent(TG_URL) + ';end';
+                } else {
+                    intent = 'intent://' + TG_URL.replace(/^https?:\/\//, '') +
+                        '#Intent;scheme=https;package=com.android.chrome;end';
+                }
+                for (i = 0; i < links.length; i++) links[i].setAttribute('href', intent);
             } else if (isIOS) {
                 var b = document.getElementById('inapp-banner');
-                if (b) b.style.display = 'block';
+                if (b) {
+                    b.style.display = 'block';
+                    setTimeout(function () { b.style.display = 'none'; }, 10000);
+                }
             }
         }
 
@@ -351,15 +377,15 @@
 
         function onJoinClick(ev) {
             // Link ko kabhi block / delay nahi karte -> real tap = direct Telegram open
-            if (!ev.isTrusted) return;                       // script se generated click
-            if (automationDetected()) return;                // bot
+            if (!ev.isTrusted) return;                        // script se generated click
+            if (automationDetected()) return;                 // bot
             if (Date.now() - loadTime < MIN_DWELL_MS) return; // bahut jaldi click
-            if (alreadyFired()) return;                      // duplicate (button 1 + button 2)
+            if (alreadyFired()) return;                       // duplicate (button 1 + button 2)
 
             markFired();
             if (typeof fbq === 'function') {
                 var eid = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
-                fbq('track', 'Lead', {}, { eventID: eid });
+                fbq('track', 'Lead', { content_name: 'Telegram Join Click' }, { eventID: eid });
             }
         }
 
