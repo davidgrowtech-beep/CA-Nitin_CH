@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Skill Learning Academy</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- META PIXEL CODE -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '2334550913988326');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2334550913988326&ev=PageView&noscript=1"
+    alt=""/></noscript>
+    <!-- END META PIXEL CODE -->
+
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --accent-color: #FFD700;
+            --bg-dark: #0f172a;
+            --text-light: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1e293b 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brand-area { margin-bottom: 22px; }
+
+        .logo-wrap {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 12px;
+            box-shadow: 0 0 28px rgba(0, 210, 255, 0.35);
+            border-radius: 50%;
+        }
+
+        .logo-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg,
+                var(--primary-color), var(--accent-color),
+                var(--secondary-color), var(--primary-color));
+            animation: spin 6s linear infinite;
+        }
+
+        .logo-img {
+            position: relative;
+            z-index: 2;
+            width: 138px;
+            height: 138px;
+            margin: 6px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 50% 30%;
+            border: 4px solid var(--bg-dark);
+            background: var(--bg-dark);
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .logo-text {
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .mentor-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            background: linear-gradient(var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .sub-headline {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 28px;
+            font-weight: 400;
+        }
+
+        .features {
+            list-style: none;
+            text-align: left;
+            background: var(--glass-bg);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 28px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .features li:last-child { margin-bottom: 0; }
+        .features li span {
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .cta-container-top { margin-bottom: 20px; }
+        .cta-container-bottom { margin-top: auto; padding-bottom: 20px; }
+
+        .telegram-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(90deg, #0088cc, #00aaff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .telegram-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+        }
+        .telegram-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shine 2.5s infinite;
+            pointer-events: none;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+        .btn-icon { margin-right: 8px; }
+
+        .trust-badge { font-size: 0.8rem; color: #94a3b8; margin-top: 10px; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+        .adv { margin-top: 8px; }
+        .adv a { color: #94a3b8; }
+
+        /* iOS in-app browser banner */
+        #inapp-banner {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 999;
+            background: #fff8e1;
+            color: #1f2937;
+            font-size: 0.78rem;
+            line-height: 1.4;
+            padding: 10px 40px 10px 14px;
+            text-align: left;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        #inapp-banner button {
+            position: absolute;
+            right: 8px; top: 6px;
+            background: none; border: none;
+            font-size: 1.3rem; color: #1f2937;
+            cursor: pointer;
+        }
+
+        @media (max-width: 380px) {
+            h1 { font-size: 1.8rem; }
+            .logo-wrap { width: 130px; height: 130px; }
+            .logo-img { width: 118px; height: 118px; margin: 6px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="inapp-banner">
+        ℹ️ Telegram sahi se open karne ke liye upar <b>⋯ / Share</b> par tap karke <b>"Open in Browser / Safari"</b> chunen.
+        <button type="button" aria-label="Close" onclick="this.parentNode.style.display='none'">×</button>
+    </div>
+
+    <div class="container">
+
+        <div class="brand-area">
+            <div class="logo-wrap">
+                <div class="logo-ring"></div>
+                <img class="logo-img" src="nn.jpg" alt="Trading Skill Learning Academy Mentor" width="138" height="138" fetchpriority="high">
+            </div>
+            <div class="logo-text">Trading Skill Academy</div>
+            <div class="mentor-tag">✓ Your Expert Mentor</div>
+        </div>
+
+        <h1>Master the Markets.<br>सही ट्रेडिंग सीखें।</h1>
+
+        <p class="sub-headline">
+            Stop gambling, start trading. Join our exclusive community for daily analysis and learning.
+            <br>
+            <span style="font-size: 0.9em; opacity: 0.8;">बिना सीखे ट्रेडिंग में पैसा न लगाएं।</span>
+        </p>
+
+        <!-- BUTTON 1 -->
+        <div class="cta-container-top">
+            <a href="https://t.me/+n9N-z9jPd_NmNDE1" class="telegram-btn tg-join-btn" rel="noopener">
+               <span class="btn-icon">✈️</span> Join Free Channel
+            </a>
+        </div>
+
+        <ul class="features">
+            <li><span>✓</span> Live Market Analysis (लाइव मार्केट)</li>
+            <li><span>✓</span> Price Action Strategies (स्ट्रैटेजी)</li>
+            <li><span>✓</span> Psychology &amp; Risk Management</li>
+            <li><span>✓</span> 100% Free Education (मुफ्त शिक्षा)</li>
+        </ul>
+
+        <!-- BUTTON 2 -->
+        <div class="cta-container-bottom">
+            <a href="https://t.me/+n9N-z9jPd_NmNDE1" class="telegram-btn tg-join-btn" rel="noopener">
+               <span class="btn-icon">🚀</span> Start Learning Now
+            </a>
+            <p class="trust-badge">🔒 Safe &amp; Secure Community</p>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Trading Skill Learning Academy. All rights reserved.<br>
+        Trading involves financial risk.
+
+        <div class="adv">Advertised by : SRS Marketing Agency<br><a href="https://t.me/srsagency" target="_blank" rel="noopener">t.me/srsagency</a></div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* ================= CONFIG ================= */
+        var MIN_DWELL_MS = 1500;      // isse pehle ka click = bot/accidental -> Lead fire nahi hoga
+        var LEAD_KEY     = 'tg_lead_fired_v1';
+        var TG_URL       = 'https://t.me/+n9N-z9jPd_NmNDE1';
+        /* ========================================= */
+
+        var loadTime = Date.now();
+        var ua = navigator.userAgent || '';
+
+        /* ---- Bot / automation detection ---- */
+        function automationDetected() {
+            try {
+                if (navigator.webdriver) return true;
+                if (/HeadlessChrome|PhantomJS|Selenium|Puppeteer|Playwright|Lighthouse|bot|crawl|spider/i.test(ua)) return true;
+                if (window.callPhantom || window._phantom || window.__nightmare) return true;
+                if (window.outerWidth === 0 && window.outerHeight === 0) return true;
+            } catch (e) {}
+            return false;
+        }
+
+        /* ---- In-app browser (Facebook / Instagram) handling ---- */
+        var isAndroid = /Android/i.test(ua);
+        var isIOS     = /iPhone|iPad|iPod/i.test(ua);
+        var inApp     = /FBAN|FBAV|FB_IAB|FBIOS|Instagram/i.test(ua);
+
+        function setupInApp() {
+            if (!inApp) return;
+            if (isAndroid) {
+                // Chrome me force-open karo taaki Telegram app hand-off kaam kare
+                var intent = 'intent://' + TG_URL.replace(/^https?:\/\//, '') +
+                    '#Intent;scheme=https;package=com.android.chrome;end';
+                var links = document.querySelectorAll('.tg-join-btn');
+                for (var i = 0; i < links.length; i++) links[i].setAttribute('href', intent);
+            } else if (isIOS) {
+                var b = document.getElementById('inapp-banner');
+                if (b) b.style.display = 'block';
+            }
+        }
+
+        /* ---- Lead tracking (ek session me sirf ek baar) ---- */
+        function alreadyFired() {
+            try { return sessionStorage.getItem(LEAD_KEY) === '1'; } catch (e) { return false; }
+        }
+        function markFired() {
+            try { sessionStorage.setItem(LEAD_KEY, '1'); } catch (e) {}
+        }
+
+        function onJoinClick(ev) {
+            // Link ko kabhi block / delay nahi karte -> real tap = direct Telegram open
+            if (!ev.isTrusted) return;                       // script se generated click
+            if (automationDetected()) return;                // bot
+            if (Date.now() - loadTime < MIN_DWELL_MS) return; // bahut jaldi click
+            if (alreadyFired()) return;                      // duplicate (button 1 + button 2)
+
+            markFired();
+            if (typeof fbq === 'function') {
+                var eid = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+                fbq('track', 'Lead', {}, { eventID: eid });
+            }
+        }
+
+        function init() {
+            setupInApp();
+            var btns = document.querySelectorAll('.tg-join-btn');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', onJoinClick, { passive: true });
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
+
+</body>
+</html>
